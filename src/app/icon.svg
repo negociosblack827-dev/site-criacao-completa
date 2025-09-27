@@ -1,0 +1,93 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente principal roxo neon para azul elétrico -->
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    
+    <!-- Gradiente para circuitos -->
+    <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    
+    <!-- Filtro de brilho futurista -->
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Cérebro estilizado minimalista -->
+  <path 
+    d="M25 35 C25 25, 30 20, 40 20 C50 20, 60 25, 65 35 C70 30, 75 35, 75 45 C75 55, 70 60, 65 65 C70 70, 65 75, 55 75 C45 75, 40 70, 35 70 C30 70, 25 65, 20 55 C15 50, 20 40, 25 35 Z" 
+    fill="url(#brainGradient)" 
+    filter="url(#neonGlow)"
+    opacity="0.95"
+  />
+  
+  <!-- Linhas tecnológicas principais - design clean e futurista -->
+  <path 
+    d="M30 30 L45 35 L60 30 L70 35" 
+    stroke="rgba(255,255,255,0.9)" 
+    stroke-width="2.5" 
+    fill="none"
+    stroke-linecap="round"
+  />
+  <path 
+    d="M35 45 L50 40 L65 45" 
+    stroke="rgba(255,255,255,0.8)" 
+    stroke-width="2.5" 
+    fill="none"
+    stroke-linecap="round"
+  />
+  <path 
+    d="M30 60 L45 65 L60 60" 
+    stroke="rgba(255,255,255,0.7)" 
+    stroke-width="2.5" 
+    fill="none"
+    stroke-linecap="round"
+  />
+  
+  <!-- Nós de circuito geométricos -->
+  <circle cx="30" cy="30" r="3.5" fill="url(#circuitGradient)" />
+  <circle cx="45" cy="35" r="3" fill="rgba(255,255,255,0.95)" />
+  <circle cx="60" cy="30" r="3.5" fill="url(#circuitGradient)" />
+  <circle cx="70" cy="35" r="2.5" fill="rgba(255,255,255,0.9)" />
+  
+  <circle cx="35" cy="45" r="3" fill="rgba(255,255,255,0.95)" />
+  <circle cx="50" cy="40" r="3.5" fill="url(#circuitGradient)" />
+  <circle cx="65" cy="45" r="3" fill="rgba(255,255,255,0.9)" />
+  
+  <circle cx="30" cy="60" r="2.5" fill="rgba(255,255,255,0.8)" />
+  <circle cx="45" cy="65" r="3" fill="url(#circuitGradient)" />
+  <circle cx="60" cy="60" r="2.5" fill="rgba(255,255,255,0.8)" />
+  
+  <!-- Conexões neurais minimalistas -->
+  <line x1="30" y1="30" x2="45" y2="35" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  <line x1="45" y1="35" x2="60" y2="30" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  <line x1="60" y1="30" x2="70" y2="35" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  
+  <line x1="35" y1="45" x2="50" y2="40" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  <line x1="50" y1="40" x2="65" y2="45" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  
+  <line x1="30" y1="60" x2="45" y2="65" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  <line x1="45" y1="65" x2="60" y2="60" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" />
+  
+  <!-- Conexões verticais para criar rede neural -->
+  <line x1="45" y1="35" x2="50" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+  <line x1="50" y1="40" x2="45" y2="65" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+  <line x1="60" y1="30" x2="65" y2="45" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+  <line x1="30" y1="30" x2="35" y2="45" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" />
+  
+  <!-- Elementos futuristas adicionais -->
+  <rect x="25" y="25" width="4" height="1" fill="rgba(255,255,255,0.6)" rx="0.5" />
+  <rect x="66" y="30" width="4" height="1" fill="rgba(255,255,255,0.6)" rx="0.5" />
+  <rect x="30" y="65" width="4" height="1" fill="rgba(255,255,255,0.6)" rx="0.5" />
+  <rect x="61" y="65" width="4" height="1" fill="rgba(255,255,255,0.6)" rx="0.5" />
+</svg>
