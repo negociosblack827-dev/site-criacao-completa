@@ -266,6 +266,30 @@ export async function PATCH(request: NextRequest) {
         ]
       });
     }
-    
+    */
 
-    
+    const simulatedResponse = {
+      success: true,
+      data: {
+        fileId: `file_${Date.now()}`,
+        fileName: file.name,
+        fileSize: file.size,
+        fileType: file.type,
+        conversationId: conversationId,
+        analysis: file.type.startsWith('image/') 
+          ? 'Esta imagem contém elementos visuais interessantes que posso analisar e discutir com você.'
+          : 'Arquivo processado com sucesso. Posso ajudá-lo a analisar o conteúdo.',
+        uploadedAt: new Date().toISOString()
+      }
+    };
+
+    return NextResponse.json(simulatedResponse);
+
+  } catch (error) {
+    console.error('Erro no upload de arquivo:', error);
+    return NextResponse.json(
+      { error: 'Erro interno do servidor' },
+      { status: 500 }
+    );
+  }
+}
