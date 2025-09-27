@@ -266,58 +266,6 @@ export async function PATCH(request: NextRequest) {
         ]
       });
     }
-    */
+    
 
-    const simulatedResponse = {
-      success: true,
-      data: {
-        fileId: `file_${Date.now()}`,
-        fileName: file.name,
-        fileSize: file.size,
-        fileType: file.type,
-        conversationId: conversationId,
-        analysis: file.type.startsWith('image/') 
-          ? 'Esta imagem contém elementos visuais interessantes que posso analisar e discutir com você.'
-          : 'Arquivo processado com sucesso. Posso ajudá-lo a analisar o conteúdo.',
-        uploadedAt: new Date().toISOString()
-      }
-    };
-
-    return NextResponse.json(simulatedResponse);
-
-  } catch (error) {
-    console.error('Erro no upload de arquivo:', error);
-    return NextResponse.json(
-      { error: 'Erro interno do servidor' },
-      { status: 500 }
-    );
-  }
-}
-export async function POST(req) {
-  try {
-    const { prompt } = await req.json();
-
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: prompt }],
-      }),
-    });
-
-    const data = await response.json();
-    return new Response(JSON.stringify({ reply: data.choices[0].message.content }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: "Erro na API" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
-}
+    
